@@ -1,0 +1,44 @@
+set $mod Mod4
+
+font pango:monospace 12
+smart_borders on
+
+floating_modifier $mod
+bindsym $mod+k exec alacritty
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec i3-dmenu-desktop
+bindsym Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+bindsym $mod+n focus next
+bindsym $mod+p focus prev
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+space floating toggle
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+l exec i3lock
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+
+bar {
+	status_command i3status
+}
